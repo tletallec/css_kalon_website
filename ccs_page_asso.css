@@ -904,6 +904,15 @@
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15) !important;
 }
 
+/* ── Élément h3 vide parasite généré par Elementor (panel Engagement) ── */
+
+.kp-asso-formations-panel h3.e-heading-base:empty {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
+}
+
 /* ── Titre pilier h3 ── */
 
 .kp-asso-formations-pillar-title .elementor-heading-title,
