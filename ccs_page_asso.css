@@ -1,0 +1,1506 @@
+/* ================================================
+   KP-ASSO-HERO
+   ================================================ */
+
+.kp-asso-hero {
+  background: var(--bg-dark) !important;
+  position: relative !important;
+  padding-top: 140px !important;
+  padding-bottom: 80px !important;
+  overflow: hidden !important;
+}
+
+.kp-asso-hero::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 40% !important;
+  height: 1px !important;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(var(--c-green-glow), 0.6) 30%,
+    rgba(var(--c-teal), 0.6) 50%,
+    rgba(var(--c-blue), 0.6) 70%,
+    transparent 100%
+  ) !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+}
+
+.kp-asso-hero::after {
+  content: "" !important;
+  position: absolute !important;
+  top: -10% !important;
+  right: -8% !important;
+  width: 640px !important;
+  height: 640px !important;
+  background: radial-gradient(circle, rgba(var(--c-green-glow), 0.10) 0%, transparent 65%) !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+  animation: hero-glow 12s ease-in-out infinite alternate !important;
+}
+
+.kp-asso-hero > .e-con-inner {
+  position: relative !important;
+  z-index: 2 !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  gap: var(--space-md) !important;
+}
+
+/* ── Breadcrumb ── */
+
+.kp-asso-breadcrumb p {
+  font-family: var(--font-body) !important;
+  font-size: var(--text-small) !important;
+  color: rgba(255, 255, 255, 0.40) !important;
+  letter-spacing: 0.02em !important;
+  margin: 0 0 var(--space-xs) !important;
+}
+
+.kp-asso-breadcrumb a {
+  color: rgba(255, 255, 255, 0.40) !important;
+  text-decoration: none !important;
+  transition: color var(--t-fast) var(--ease-out) !important;
+}
+
+.kp-asso-breadcrumb a:hover {
+  color: var(--accent-green) !important;
+}
+
+/* ── Tag ── */
+
+.kp-asso-hero-tag .elementor-heading-title {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 8px 18px !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 6px !important;
+  font-family: var(--font-body) !important;
+  font-size: 13px !important;
+  font-weight: var(--font-medium) !important;
+  letter-spacing: 0.3px !important;
+  text-transform: none !important;
+  color: rgba(255, 255, 255, 0.50) !important;
+  margin: 0 !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+/* ── Titre h1 ── */
+
+.kp-asso-hero-title .elementor-heading-title {
+  font-family: var(--font-display) !important;
+  font-size: var(--text-hero) !important;
+  font-weight: var(--font-extrabold) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.035em !important;
+  text-transform: uppercase !important;
+  text-wrap: balance !important;
+  margin: 0 !important;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.97) 40%,
+    rgba(200, 215, 230, 0.80) 100%
+  ) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.kp-asso-hero-title em {
+  font-family: var(--font-serif) !important;
+  font-weight: 500 !important;
+  font-style: italic !important;
+  text-transform: none !important;
+  background: linear-gradient(135deg, rgba(var(--c-green-glow), 1), rgba(var(--c-teal), 0.85)) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* ── Sous-titre ── */
+
+.kp-asso-hero-subtitle p {
+  font-family: var(--font-body) !important;
+  font-size: clamp(16px, 1.6vw, 19px) !important;
+  font-weight: var(--font-normal) !important;
+  line-height: var(--leading-relaxed) !important;
+  color: rgba(255, 255, 255, 0.55) !important;
+  max-width: 560px !important;
+  margin: 0 !important;
+}
+
+/* ── CTA ── */
+
+.kp-asso-hero-cta .elementor-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  background: var(--accent-green) !important;
+  border: 1px solid var(--accent-green) !important;
+  color: var(--bg-dark) !important;
+  -webkit-text-fill-color: var(--bg-dark) !important;
+  border-radius: var(--radius-button) !important;
+  padding: 16px 32px !important;
+  font-family: var(--font-display) !important;
+  font-size: 15px !important;
+  font-weight: var(--font-semibold) !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  box-shadow: 0 10px 30px rgba(var(--c-green-glow), 0.25) !important;
+  margin-top: var(--space-md) !important;
+  transition: transform var(--t-base) var(--ease-out),
+              box-shadow var(--t-base) var(--ease-out) !important;
+}
+
+.kp-asso-hero-cta .elementor-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 18px 50px rgba(var(--c-green-glow), 0.35) !important;
+}
+
+.kp-asso-hero-cta .elementor-button:active {
+  transform: translateY(1px) scale(0.98) !important;
+  transition-duration: 100ms !important;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 1024px) {
+  .kp-asso-hero-title .elementor-heading-title {
+    font-size: 52px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .kp-asso-hero {
+    padding-top: 100px !important;
+    padding-bottom: 48px !important;
+  }
+  .kp-asso-hero-title .elementor-heading-title {
+    font-size: 38px !important;
+  }
+  .kp-asso-hero-subtitle p {
+    font-size: 16px !important;
+  }
+}
+
+
+/* ================================================
+   KP-ASSO-OFFERS
+   ================================================ */
+
+.kp-asso-offers {
+  background: #EFF3F7 !important;
+  position: relative !important;
+  padding: var(--space-4xl) 0 !important;
+}
+
+.kp-asso-offers > .e-con-inner {
+  position: relative !important;
+  z-index: 1 !important;
+  align-items: center !important;
+  gap: 0 !important;
+}
+
+/* ── Titre ── */
+
+.kp-asso-offers-title .elementor-heading-title {
+  font-family: var(--font-display) !important;
+  font-size: var(--text-section) !important;
+  font-weight: var(--font-extrabold) !important;
+  line-height: var(--leading-snug) !important;
+  letter-spacing: -0.02em !important;
+  text-transform: uppercase !important;
+  color: var(--text-on-light) !important;
+  text-align: center !important;
+  margin: 0 0 var(--space-md) !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+.kp-asso-offers-title em {
+  font-family: var(--font-serif) !important;
+  font-weight: 500 !important;
+  font-style: italic !important;
+  text-transform: none !important;
+  -webkit-text-fill-color: transparent !important;
+  background: linear-gradient(135deg, var(--accent-green-dark), var(--accent-teal-dark)) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+
+/* ── Sous-titre ── */
+
+.kp-asso-offers-subtitle .elementor-heading-title {
+  font-family: var(--font-body) !important;
+  font-size: var(--text-subtitle) !important;
+  font-weight: var(--font-normal) !important;
+  line-height: var(--leading-relaxed) !important;
+  color: var(--text-muted-on-light) !important;
+  text-align: center !important;
+  margin: 0 0 var(--space-2xl) !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+/* ── Tabs layout (vertical : nav gauche, panel droite) ── */
+
+.kp-asso-offers-tabs {
+  width: 100% !important;
+}
+
+.kp-asso-offers-tabs .e-n-tabs {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: var(--space-lg) !important;
+  align-items: flex-start !important;
+  width: 100% !important;
+}
+
+.kp-asso-offers-tabs .e-n-tabs-heading {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: var(--space-sm) !important;
+  width: 280px !important;
+  flex-shrink: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.kp-asso-offers-tabs .e-n-tabs-content {
+  flex: 1 !important;
+  min-width: 0 !important;
+}
+
+/* ── Tab titles ── */
+
+.kp-asso-offers-tabs .e-n-tab-title {
+  display: flex !important;
+  align-items: center !important;
+  text-align: left !important;
+  padding: 16px 20px !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(var(--c-navy), 0.10) !important;
+  border-radius: 12px !important;
+  cursor: pointer !important;
+  transition: all var(--t-base) var(--ease-out) !important;
+  box-shadow: 0 2px 8px rgba(var(--c-navy), 0.04) !important;
+  width: 100% !important;
+}
+
+.kp-asso-offers-tabs .e-n-tab-title:hover:not([aria-selected="true"]) {
+  border-color: rgba(var(--c-navy), 0.20) !important;
+  transform: translateX(2px) !important;
+}
+
+.kp-asso-offers-tabs .e-n-tab-title-text {
+  font-family: var(--font-display) !important;
+  font-size: 15px !important;
+  font-weight: var(--font-extrabold) !important;
+  letter-spacing: -0.01em !important;
+  text-transform: uppercase !important;
+  color: var(--text-on-light) !important;
+  line-height: var(--leading-snug) !important;
+}
+
+/* ── Tab actif ── */
+
+.kp-asso-offers-tabs .e-n-tab-title:nth-child(1)[aria-selected="true"] {
+  border: 2px solid var(--accent-green-dark) !important;
+  box-shadow: 0 6px 20px rgba(var(--c-green-glow), 0.16) !important;
+  background: rgba(var(--c-green-glow), 0.06) !important;
+}
+.kp-asso-offers-tabs .e-n-tab-title:nth-child(1)[aria-selected="true"] .e-n-tab-title-text {
+  color: var(--accent-green-dark) !important;
+}
+
+.kp-asso-offers-tabs .e-n-tab-title:nth-child(2)[aria-selected="true"] {
+  border: 2px solid var(--accent-teal-dark) !important;
+  box-shadow: 0 6px 20px rgba(var(--c-teal), 0.16) !important;
+  background: rgba(var(--c-teal), 0.06) !important;
+}
+.kp-asso-offers-tabs .e-n-tab-title:nth-child(2)[aria-selected="true"] .e-n-tab-title-text {
+  color: var(--accent-teal-dark) !important;
+}
+
+.kp-asso-offers-tabs .e-n-tab-title:nth-child(3)[aria-selected="true"] {
+  border: 2px solid var(--accent-blue-dark) !important;
+  box-shadow: 0 6px 20px rgba(var(--c-blue), 0.16) !important;
+  background: rgba(var(--c-blue), 0.06) !important;
+}
+.kp-asso-offers-tabs .e-n-tab-title:nth-child(3)[aria-selected="true"] .e-n-tab-title-text {
+  color: var(--accent-blue-dark) !important;
+}
+
+/* ── Panels ── */
+
+.kp-asso-offer-panel {
+  border-radius: var(--radius-card) !important;
+  padding: var(--space-2xl) !important;
+  flex-direction: column !important;
+  gap: var(--space-md) !important;
+  border-top: 0 !important;
+  position: relative !important;
+  overflow: hidden !important;
+  min-height: 520px !important;
+}
+
+.kp-asso-offer-panel--green {
+  background: linear-gradient(160deg, rgba(var(--c-green-glow), 0.10) 0%, rgba(var(--c-green-glow), 0.03) 100%) !important;
+  border: 2px solid rgba(var(--c-green-glow), 0.25) !important;
+  box-shadow: 0 8px 30px rgba(var(--c-green-glow), 0.08) !important;
+}
+.kp-asso-offer-panel--teal {
+  background: linear-gradient(160deg, rgba(var(--c-teal), 0.10) 0%, rgba(var(--c-teal), 0.03) 100%) !important;
+  border: 2px solid rgba(var(--c-teal), 0.25) !important;
+  box-shadow: 0 8px 30px rgba(var(--c-teal), 0.08) !important;
+}
+.kp-asso-offer-panel--blue {
+  background: linear-gradient(160deg, rgba(var(--c-blue), 0.10) 0%, rgba(var(--c-blue), 0.03) 100%) !important;
+  border: 2px solid rgba(var(--c-blue), 0.25) !important;
+  box-shadow: 0 8px 30px rgba(var(--c-blue), 0.08) !important;
+}
+
+/* Numéro décoratif bas-droite */
+
+.kp-asso-offer-panel--green::after { content: "01" !important; }
+.kp-asso-offer-panel--teal::after  { content: "02" !important; }
+.kp-asso-offer-panel--blue::after  { content: "03" !important; }
+
+.kp-asso-offer-panel::after {
+  position: absolute !important;
+  bottom: -20px !important;
+  right: 24px !important;
+  font-family: var(--font-display) !important;
+  font-size: 160px !important;
+  font-weight: var(--font-extrabold) !important;
+  line-height: 1 !important;
+  letter-spacing: -6px !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+  opacity: 0.07 !important;
+  color: var(--text-on-light) !important;
+}
+
+.kp-asso-offer-panel > * {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* ── Numéro offre ── */
+
+.kp-asso-offer-num .elementor-heading-title {
+  font-family: var(--font-body) !important;
+  font-size: var(--text-tag) !important;
+  font-weight: var(--font-semibold) !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+  margin: 0 !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+}
+.kp-asso-offer-panel--green .kp-asso-offer-num .elementor-heading-title { color: var(--accent-green-dark) !important; }
+.kp-asso-offer-panel--teal  .kp-asso-offer-num .elementor-heading-title { color: var(--accent-teal-dark) !important; }
+.kp-asso-offer-panel--blue  .kp-asso-offer-num .elementor-heading-title { color: var(--accent-blue-dark) !important; }
+
+/* ── Titre h3 ── */
+
+.kp-asso-offer-title .elementor-heading-title {
+  font-family: var(--font-display) !important;
+  font-size: clamp(22px, 2.5vw, 28px) !important;
+  font-weight: var(--font-extrabold) !important;
+  letter-spacing: -0.02em !important;
+  text-transform: uppercase !important;
+  color: var(--text-on-light) !important;
+  margin: 0 !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+/* ── Tagline ── */
+
+.kp-asso-offer-tagline .elementor-heading-title {
+  font-family: var(--font-serif) !important;
+  font-size: 17px !important;
+  font-weight: 500 !important;
+  font-style: italic !important;
+  color: var(--text-muted-on-light) !important;
+  margin: 0 !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+/* ── Format badge (coloré par panel) ── */
+
+.kp-asso-offer-format .elementor-heading-title {
+  display: inline-flex !important;
+  padding: 5px 14px !important;
+  border-radius: var(--radius-pill) !important;
+  font-family: var(--font-body) !important;
+  font-size: 11px !important;
+  font-weight: var(--font-semibold) !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  margin: var(--space-xs) 0 !important;
+  -webkit-text-fill-color: unset !important;
+}
+.kp-asso-offer-panel--green .kp-asso-offer-format .elementor-heading-title {
+  background: rgba(var(--c-green-glow), 0.15) !important;
+  color: var(--accent-green-dark) !important;
+  border: 1px solid rgba(var(--c-green-glow), 0.30) !important;
+}
+.kp-asso-offer-panel--teal .kp-asso-offer-format .elementor-heading-title {
+  background: rgba(var(--c-teal), 0.15) !important;
+  color: var(--accent-teal-dark) !important;
+  border: 1px solid rgba(var(--c-teal), 0.30) !important;
+}
+.kp-asso-offer-panel--blue .kp-asso-offer-format .elementor-heading-title {
+  background: rgba(var(--c-blue), 0.15) !important;
+  color: var(--accent-blue-dark) !important;
+  border: 1px solid rgba(var(--c-blue), 0.30) !important;
+}
+
+/* ── Description ── */
+
+.kp-asso-offer-desc p {
+  font-family: var(--font-body) !important;
+  font-size: var(--text-body) !important;
+  line-height: var(--leading-relaxed) !important;
+  color: var(--text-muted-on-light) !important;
+  margin: 0 !important;
+  max-width: 680px !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+/* ── Body (2 colonnes Prestations / Bénéfices) ── */
+
+.kp-asso-offer-body {
+  display: grid !important;
+  grid-template-columns: 3fr 2fr !important;
+  gap: var(--space-2xl) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  align-items: stretch !important;
+  box-sizing: border-box !important;
+  padding-top: var(--space-md) !important;
+  border-top: 1px solid rgba(var(--c-navy), 0.10) !important;
+  margin-top: var(--space-xs) !important;
+}
+
+.kp-asso-offer-col--presta,
+.kp-asso-offer-col--bens {
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+/* ── Label colonne ── */
+
+.kp-asso-offer-label .elementor-heading-title {
+  font-family: var(--font-body) !important;
+  font-size: 11px !important;
+  font-weight: var(--font-semibold) !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+  color: var(--text-muted-on-light) !important;
+  margin: 0 0 var(--space-md) !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+/* ── Liste Prestations ── */
+
+.kp-asso-offer-presta .elementor-icon-list-items {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+}
+
+.kp-asso-offer-presta .elementor-icon-list-item {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+}
+
+.kp-asso-offer-presta .elementor-icon-list-icon {
+  flex-shrink: 0 !important;
+  width: 13px !important;
+  height: 13px !important;
+  margin-top: 4px !important;
+}
+.kp-asso-offer-panel--green .kp-asso-offer-presta .elementor-icon-list-icon svg { fill: var(--accent-green-dark) !important; }
+.kp-asso-offer-panel--teal  .kp-asso-offer-presta .elementor-icon-list-icon svg { fill: var(--accent-teal-dark) !important; }
+.kp-asso-offer-panel--blue  .kp-asso-offer-presta .elementor-icon-list-icon svg { fill: var(--accent-blue-dark) !important; }
+
+.kp-asso-offer-presta .elementor-icon-list-text {
+  font-family: var(--font-body) !important;
+  font-size: 14px !important;
+  color: var(--text-on-light) !important;
+  line-height: var(--leading-relaxed) !important;
+}
+
+.kp-asso-offer-presta .elementor-icon-list-text strong {
+  font-weight: var(--font-semibold) !important;
+  display: block !important;
+}
+
+/* ── Colonne Bénéfices (glassmorphisme teinté) ── */
+
+.kp-asso-offer-col--bens {
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+  border-radius: 16px !important;
+  padding: var(--space-lg) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 4px 20px rgba(var(--c-navy), 0.08) !important;
+}
+.kp-asso-offer-panel--green .kp-asso-offer-col--bens {
+  background: rgba(var(--c-green-glow), 0.12) !important;
+  border: 1px solid rgba(var(--c-green-glow), 0.35) !important;
+}
+.kp-asso-offer-panel--teal .kp-asso-offer-col--bens {
+  background: rgba(var(--c-teal), 0.12) !important;
+  border: 1px solid rgba(var(--c-teal), 0.35) !important;
+}
+.kp-asso-offer-panel--blue .kp-asso-offer-col--bens {
+  background: rgba(var(--c-blue), 0.12) !important;
+  border: 1px solid rgba(var(--c-blue), 0.35) !important;
+}
+
+/* ── Liste Bénéfices ── */
+
+.kp-asso-offer-bens-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: var(--space-sm) !important;
+}
+
+.kp-asso-offer-bens-list li {
+  font-family: var(--font-body) !important;
+  font-size: 14px !important;
+  font-weight: var(--font-medium) !important;
+  color: var(--text-on-light) !important;
+  line-height: var(--leading-normal) !important;
+  padding-left: 20px !important;
+  position: relative !important;
+}
+
+.kp-asso-offer-bens-list li::before {
+  content: "→" !important;
+  position: absolute !important;
+  left: 0 !important;
+  font-weight: var(--font-normal) !important;
+}
+.kp-asso-offer-panel--green .kp-asso-offer-bens-list li::before { color: var(--accent-green-dark) !important; }
+.kp-asso-offer-panel--teal  .kp-asso-offer-bens-list li::before { color: var(--accent-teal-dark) !important; }
+.kp-asso-offer-panel--blue  .kp-asso-offer-bens-list li::before { color: var(--accent-blue-dark) !important; }
+
+/* ── CTA boutons colorés ── */
+
+.kp-asso-offer-cta .elementor-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  border-radius: var(--radius-button) !important;
+  padding: 14px 28px !important;
+  font-family: var(--font-display) !important;
+  font-size: 14px !important;
+  font-weight: var(--font-semibold) !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
+  border: none !important;
+  transition: transform var(--t-base) var(--ease-out),
+              box-shadow var(--t-base) var(--ease-out) !important;
+}
+.kp-asso-offer-cta--green .elementor-button {
+  background: var(--accent-green-dark) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(var(--c-green-glow), 0.30) !important;
+}
+.kp-asso-offer-cta--green .elementor-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 32px rgba(var(--c-green-glow), 0.40) !important;
+}
+.kp-asso-offer-cta--teal .elementor-button {
+  background: var(--accent-teal-dark) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(var(--c-teal), 0.30) !important;
+}
+.kp-asso-offer-cta--teal .elementor-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 32px rgba(var(--c-teal), 0.40) !important;
+}
+.kp-asso-offer-cta--blue .elementor-button {
+  background: var(--accent-blue-dark) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(var(--c-blue), 0.30) !important;
+}
+.kp-asso-offer-cta--blue .elementor-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 32px rgba(var(--c-blue), 0.40) !important;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 1024px) {
+  .kp-asso-offers-tabs .e-n-tabs {
+    flex-direction: column !important;
+  }
+  .kp-asso-offers-tabs .e-n-tabs-heading {
+    flex-direction: row !important;
+    width: 100% !important;
+  }
+  .kp-asso-offer-body {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-lg) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .kp-asso-offers-tabs .e-n-tabs-heading {
+    flex-direction: column !important;
+  }
+  .kp-asso-offer-panel {
+    padding: var(--space-lg) !important;
+  }
+}
+
+
+/* ================================================
+   KP-ASSO-FORMATIONS
+   ================================================ */
+
+.kp-asso-formations,
+.kp-asso-formations.e-con {
+  background: #1C3557 !important;
+  background-color: #1C3557 !important;
+  position: relative !important;
+  padding: var(--space-4xl) 0 !important;
+}
+
+.kp-asso-formations > .e-con-inner {
+  position: relative !important;
+  z-index: 1 !important;
+  align-items: center !important;
+  gap: 0 !important;
+}
+
+/* ── Header badge Qualiopi ── */
+
+.kp-asso-formation-header {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: var(--space-xl) !important;
+  background: rgba(255, 255, 255, 0.07) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  border-radius: var(--radius-card) !important;
+  padding: var(--space-lg) var(--space-xl) !important;
+  width: fit-content !important;
+  margin-bottom: var(--space-2xl) !important;
+}
+
+.kp-asso-formation-header .elementor-widget-image {
+  flex-shrink: 0 !important;
+}
+
+.kp-asso-formation-header .elementor-widget-image img {
+  width: 180px !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  filter: brightness(0) invert(1) !important;
+  opacity: 0.80 !important;
+}
+
+.kp-asso-formation-header .elementor-widget-text-editor {
+  border-left: 1px solid rgba(255, 255, 255, 0.15) !important;
+  padding-left: var(--space-xl) !important;
+}
+
+.kp-asso-formation-header .elementor-widget-text-editor p {
+  font-family: var(--font-body) !important;
+  font-size: 14px !important;
+  font-weight: var(--font-medium) !important;
+  color: rgba(255, 255, 255, 0.65) !important;
+  line-height: var(--leading-relaxed) !important;
+  margin: 0 !important;
+}
+
+/* ── Titre ── */
+
+.kp-asso-formations-title .elementor-heading-title {
+  font-family: var(--font-display) !important;
+  font-size: var(--text-section) !important;
+  font-weight: var(--font-extrabold) !important;
+  line-height: var(--leading-snug) !important;
+  letter-spacing: -0.02em !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  margin: 0 0 var(--space-md) !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+.kp-asso-formations-title em {
+  font-family: var(--font-serif) !important;
+  font-weight: 500 !important;
+  font-style: italic !important;
+  text-transform: none !important;
+  -webkit-text-fill-color: transparent !important;
+  background: linear-gradient(135deg, rgba(var(--c-teal), 1), rgba(var(--c-blue), 0.85)) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+
+/* ── Sous-titre ── */
+
+.kp-asso-formations-subtitle p {
+  font-family: var(--font-body) !important;
+  font-size: var(--text-subtitle) !important;
+  font-weight: var(--font-normal) !important;
+  line-height: var(--leading-relaxed) !important;
+  color: rgba(255, 255, 255, 0.55) !important;
+  text-align: center !important;
+  margin: 0 0 var(--space-2xl) !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+/* ── Tabs layout (horizontal, 4 pills) ── */
+
+.kp-asso-formations-tabs {
+  width: 100% !important;
+  margin-top: var(--space-3xl) !important;
+  margin-bottom: var(--space-2xl) !important;
+}
+
+.kp-asso-formations-tabs .e-n-tabs {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: var(--space-lg) !important;
+  width: 100% !important;
+}
+
+.kp-asso-formations-tabs .e-n-tabs-heading {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: var(--space-sm) !important;
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  justify-content: center !important;
+}
+
+.kp-asso-formations-tabs .e-n-tabs-content {
+  width: 100% !important;
+}
+
+.kp-asso-formations-tabs .e-n-tab-title {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 12px 24px !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: var(--radius-pill) !important;
+  cursor: pointer !important;
+  transition: all var(--t-base) var(--ease-out) !important;
+  flex: 1 !important;
+  max-width: 200px !important;
+}
+
+.kp-asso-formations-tabs .e-n-tab-title:hover:not([aria-selected="true"]) {
+  background: rgba(255, 255, 255, 0.10) !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
+  transform: translateY(-2px) !important;
+}
+
+.kp-asso-formations-tabs .e-n-tab-title-text {
+  font-family: var(--font-display) !important;
+  font-size: 14px !important;
+  font-weight: var(--font-extrabold) !important;
+  letter-spacing: 0.02em !important;
+  text-transform: uppercase !important;
+  color: rgba(255, 255, 255, 0.65) !important;
+  line-height: 1 !important;
+}
+
+/* ── Tab actif (4 couleurs) ── */
+
+.kp-asso-formations-tabs .e-n-tab-title:nth-child(1)[aria-selected="true"] {
+  background: rgba(var(--c-green-glow), 0.15) !important;
+  border: 2px solid rgba(var(--c-green-glow), 0.60) !important;
+  box-shadow: 0 4px 20px rgba(var(--c-green-glow), 0.20) !important;
+}
+.kp-asso-formations-tabs .e-n-tab-title:nth-child(1)[aria-selected="true"] .e-n-tab-title-text {
+  color: rgba(var(--c-green-glow), 1) !important;
+}
+.kp-asso-formations-tabs .e-n-tab-title:nth-child(2)[aria-selected="true"] {
+  background: rgba(var(--c-teal), 0.15) !important;
+  border: 2px solid rgba(var(--c-teal), 0.60) !important;
+  box-shadow: 0 4px 20px rgba(var(--c-teal), 0.20) !important;
+}
+.kp-asso-formations-tabs .e-n-tab-title:nth-child(2)[aria-selected="true"] .e-n-tab-title-text {
+  color: rgba(var(--c-teal), 1) !important;
+}
+.kp-asso-formations-tabs .e-n-tab-title:nth-child(3)[aria-selected="true"] {
+  background: rgba(var(--c-blue), 0.15) !important;
+  border: 2px solid rgba(var(--c-blue), 0.60) !important;
+  box-shadow: 0 4px 20px rgba(var(--c-blue), 0.20) !important;
+}
+.kp-asso-formations-tabs .e-n-tab-title:nth-child(3)[aria-selected="true"] .e-n-tab-title-text {
+  color: rgba(var(--c-blue), 1) !important;
+}
+.kp-asso-formations-tabs .e-n-tab-title:nth-child(4)[aria-selected="true"] {
+  background: rgba(var(--c-violet), 0.15) !important;
+  border: 2px solid rgba(var(--c-violet), 0.60) !important;
+  box-shadow: 0 4px 20px rgba(var(--c-violet), 0.20) !important;
+}
+.kp-asso-formations-tabs .e-n-tab-title:nth-child(4)[aria-selected="true"] .e-n-tab-title-text {
+  color: rgb(var(--c-violet)) !important;
+}
+
+/* ── Panels ── */
+
+.kp-asso-formations-panel,
+.kp-asso-formations-panel > .e-con-inner {
+  flex-direction: column !important;
+  gap: var(--space-md) !important;
+  width: 100% !important;
+}
+
+.kp-asso-formations-panel {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.10) !important;
+  border-radius: var(--radius-card) !important;
+  padding: var(--space-2xl) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* ── Titre pilier h3 ── */
+
+.kp-asso-formations-pillar-title .elementor-heading-title,
+.kp-asso-formations-panel h3.e-heading-base {
+  font-family: var(--font-display) !important;
+  font-size: clamp(20px, 2vw, 24px) !important;
+  font-weight: var(--font-extrabold) !important;
+  letter-spacing: -0.01em !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+  margin: 0 0 var(--space-xs) !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+/* ── Description pilier ── */
+
+.kp-asso-formations-pillar-desc p,
+.kp-asso-formations-panel p.e-paragraph-base {
+  font-family: var(--font-body) !important;
+  font-size: var(--text-body) !important;
+  color: rgba(255, 255, 255, 0.55) !important;
+  line-height: var(--leading-relaxed) !important;
+  margin: 0 0 var(--space-lg) !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+/* ── Liste (grille 2 colonnes) ── */
+
+.kp-asso-formations-pillar-list .elementor-icon-list-items {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: var(--space-sm) var(--space-2xl) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.kp-asso-formations-pillar-list .elementor-icon-list-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: var(--space-xs) !important;
+}
+
+.kp-asso-formations-pillar-list .elementor-icon-list-icon {
+  flex-shrink: 0 !important;
+  width: 16px !important;
+  height: 16px !important;
+  color: rgba(var(--c-teal), 1) !important;
+}
+
+.kp-asso-formations-pillar-list .elementor-icon-list-icon svg {
+  width: 100% !important;
+  height: 100% !important;
+  fill: currentColor !important;
+}
+
+.kp-asso-formations-pillar-list .elementor-icon-list-text {
+  font-family: var(--font-body) !important;
+  font-size: var(--text-body) !important;
+  font-weight: var(--font-medium) !important;
+  color: rgba(255, 255, 255, 0.80) !important;
+  line-height: var(--leading-normal) !important;
+}
+
+/* ── CTA ── */
+
+.kp-asso-formations-cta .elementor-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  font-family: var(--font-display) !important;
+  font-size: 14px !important;
+  font-weight: var(--font-extrabold) !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background: linear-gradient(135deg, rgba(var(--c-teal), 1), rgba(var(--c-blue), 0.85)) !important;
+  border: none !important;
+  border-radius: var(--radius-button) !important;
+  padding: 14px 32px !important;
+  box-shadow: 0 4px 20px rgba(var(--c-teal), 0.35) !important;
+  text-decoration: none !important;
+  transition: transform var(--t-base) var(--ease-out),
+              box-shadow var(--t-base) var(--ease-out) !important;
+}
+
+.kp-asso-formations-cta .elementor-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 30px rgba(var(--c-teal), 0.50) !important;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 1024px) {
+  .kp-asso-formations-tabs .e-n-tab-title {
+    padding: 10px 14px !important;
+    max-width: unset !important;
+  }
+  .kp-asso-formations-pillar-list .elementor-icon-list-items {
+    grid-template-columns: 1fr !important;
+  }
+  .kp-asso-formations-panel {
+    padding: var(--space-xl) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .kp-asso-formations-tabs .e-n-tabs-heading {
+    flex-wrap: wrap !important;
+  }
+  .kp-asso-formations-tabs .e-n-tab-title {
+    flex: 0 0 calc(50% - 6px) !important;
+    max-width: unset !important;
+  }
+  .kp-asso-formation-header {
+    flex-direction: column !important;
+    text-align: center !important;
+    border-radius: var(--radius-card) !important;
+  }
+}
+
+
+/* ================================================
+   KP-ASSO-ACCOMPAGNEMENTS
+   ================================================ */
+
+.kp-asso-accompagnements,
+.kp-asso-accompagnements.e-con {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  position: relative !important;
+  padding: var(--space-4xl) 0 !important;
+}
+
+.kp-asso-accompagnements > .e-con-inner {
+  position: relative !important;
+  z-index: 1 !important;
+  align-items: center !important;
+  gap: 0 !important;
+}
+
+/* ── Titre ── */
+
+.kp-asso-accomp-title .elementor-heading-title {
+  font-family: var(--font-display) !important;
+  font-size: var(--text-section) !important;
+  font-weight: var(--font-extrabold) !important;
+  line-height: var(--leading-snug) !important;
+  letter-spacing: -0.02em !important;
+  text-transform: uppercase !important;
+  color: var(--text-on-light) !important;
+  text-align: center !important;
+  margin: 0 0 var(--space-md) !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+.kp-asso-accomp-title em {
+  font-family: var(--font-serif) !important;
+  font-weight: 500 !important;
+  font-style: italic !important;
+  text-transform: none !important;
+  -webkit-text-fill-color: transparent !important;
+  background: linear-gradient(135deg, var(--accent-green-dark), var(--accent-teal-dark)) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+
+/* ── Sous-titre ── */
+
+.kp-asso-accomp-subtitle p {
+  font-family: var(--font-body) !important;
+  font-size: var(--text-subtitle) !important;
+  font-weight: var(--font-normal) !important;
+  line-height: var(--leading-relaxed) !important;
+  color: var(--text-muted-on-light) !important;
+  text-align: center !important;
+  margin: 0 0 var(--space-3xl) !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+/* ── Grille 3 colonnes ── */
+
+.kp-asso-accompagnements .e-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: var(--space-lg) !important;
+  width: 100% !important;
+}
+
+/* ── Carte ── */
+
+.kp-asso-accomp-grid {
+  background: #F4F7FA !important;
+  border: 1px solid rgba(var(--c-navy), 0.08) !important;
+  border-radius: var(--radius-card) !important;
+  padding: var(--space-xl) !important;
+  flex-direction: column !important;
+  gap: var(--space-sm) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: transform var(--t-base) var(--ease-out),
+              box-shadow var(--t-base) var(--ease-out) !important;
+}
+
+.kp-asso-accomp-grid:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 12px 32px rgba(var(--c-navy), 0.10) !important;
+}
+
+.kp-asso-accomp-grid:first-child {
+  background: linear-gradient(160deg, rgba(var(--c-green-glow), 0.10) 0%, rgba(var(--c-teal), 0.06) 100%) !important;
+  border: 2px solid rgba(var(--c-green-glow), 0.30) !important;
+  box-shadow: 0 8px 30px rgba(var(--c-green-glow), 0.08) !important;
+}
+
+/* ── Tag badge ── */
+
+.kp-asso-accomp-card-tag p {
+  display: inline-flex !important;
+  padding: 4px 12px !important;
+  border-radius: var(--radius-pill) !important;
+  font-family: var(--font-body) !important;
+  font-size: 11px !important;
+  font-weight: var(--font-semibold) !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  background: rgba(var(--c-navy), 0.08) !important;
+  color: var(--text-muted-on-light) !important;
+  margin: 0 0 var(--space-xs) !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+.kp-asso-accomp-grid:first-child .kp-asso-accomp-card-tag p {
+  background: rgba(var(--c-green-glow), 0.15) !important;
+  color: var(--accent-green-dark) !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+/* ── Titre carte ── */
+
+.kp-asso-accomp-card-title .elementor-heading-title {
+  font-family: var(--font-display) !important;
+  font-size: clamp(17px, 1.8vw, 20px) !important;
+  font-weight: var(--font-extrabold) !important;
+  letter-spacing: -0.01em !important;
+  text-transform: uppercase !important;
+  color: var(--text-on-light) !important;
+  margin: 0 !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+/* ── Sous-titre carte ── */
+
+.kp-asso-accomp-card-subtitle p {
+  font-family: var(--font-serif) !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  font-style: italic !important;
+  color: var(--text-muted-on-light) !important;
+  margin: 0 !important;
+  padding-bottom: var(--space-sm) !important;
+  border-bottom: 1px solid rgba(var(--c-navy), 0.08) !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+/* ── Description ── */
+
+.kp-asso-accomp-card-desc p {
+  font-family: var(--font-body) !important;
+  font-size: 14px !important;
+  font-weight: var(--font-normal) !important;
+  line-height: var(--leading-relaxed) !important;
+  color: var(--text-muted-on-light) !important;
+  margin: 0 !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+/* ── Pour qui ── */
+
+.kp-asso-accomp-card-subdesc p {
+  font-family: var(--font-body) !important;
+  font-size: 13px !important;
+  font-weight: var(--font-normal) !important;
+  line-height: var(--leading-relaxed) !important;
+  color: var(--text-muted-on-light) !important;
+  margin: var(--space-xs) 0 0 !important;
+  padding: var(--space-sm) var(--space-md) !important;
+  background: rgba(var(--c-navy), 0.05) !important;
+  border-radius: 8px !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+.kp-asso-accomp-card-subdesc p strong {
+  font-weight: var(--font-semibold) !important;
+  color: var(--text-on-light) !important;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 1024px) {
+  .kp-asso-accompagnements .e-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .kp-asso-accompagnements .e-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .kp-asso-accomp-grid {
+    padding: var(--space-lg) !important;
+  }
+}
+
+
+/* ================================================
+   KP-ASSO-METHODE
+   ================================================ */
+
+.kp-asso-methode,
+.kp-asso-methode.e-con {
+  background: #1C3557 !important;
+  background-color: #1C3557 !important;
+  position: relative !important;
+  padding: var(--space-4xl) 0 !important;
+}
+
+.kp-asso-methode > .e-con-inner {
+  position: relative !important;
+  z-index: 1 !important;
+  align-items: center !important;
+  gap: 0 !important;
+}
+
+/* ── Titre ── */
+
+.kp-asso-methode-title .elementor-heading-title {
+  font-family: var(--font-display) !important;
+  font-size: var(--text-section) !important;
+  font-weight: var(--font-extrabold) !important;
+  line-height: var(--leading-snug) !important;
+  letter-spacing: -0.02em !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  margin: 0 0 var(--space-md) !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+.kp-asso-methode-title em {
+  font-family: var(--font-serif) !important;
+  font-weight: 500 !important;
+  font-style: italic !important;
+  text-transform: none !important;
+  -webkit-text-fill-color: transparent !important;
+  background: linear-gradient(135deg, rgba(var(--c-teal), 1), rgba(var(--c-blue), 0.85)) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+
+/* ── Sous-titre ── */
+
+.kp-asso-methode-subtitle p {
+  font-family: var(--font-body) !important;
+  font-size: var(--text-subtitle) !important;
+  font-weight: var(--font-normal) !important;
+  line-height: var(--leading-relaxed) !important;
+  color: rgba(255, 255, 255, 0.55) !important;
+  text-align: center !important;
+  margin: 0 0 var(--space-3xl) !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+/* ── Timeline ── */
+
+.kp-asso-methode-timeline {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  gap: 0 !important;
+  width: 100% !important;
+  position: relative !important;
+}
+
+.kp-asso-methode-timeline::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 28px !important;
+  left: 10% !important;
+  right: 10% !important;
+  height: 2px !important;
+  background: linear-gradient(
+    90deg,
+    rgba(var(--c-teal), 0.5) 0%,
+    rgba(var(--c-blue), 0.5) 100%
+  ) !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+
+/* ── Step ── */
+
+.kp-asso-methode-step {
+  flex: 1 !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  gap: var(--space-md) !important;
+  padding: 0 var(--space-md) !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* ── Numéro ── */
+
+.kp-asso-methode-step-num .elementor-heading-title {
+  width: 56px !important;
+  height: 56px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, rgba(var(--c-teal), 1), rgba(var(--c-blue), 0.85)) !important;
+  font-family: var(--font-display) !important;
+  font-size: 18px !important;
+  font-weight: var(--font-extrabold) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  margin: 0 auto !important;
+  box-shadow: 0 4px 20px rgba(var(--c-teal), 0.40) !important;
+  letter-spacing: 0 !important;
+}
+
+/* ── Titre étape ── */
+
+.kp-asso-methode-step-title .elementor-heading-title {
+  font-family: var(--font-display) !important;
+  font-size: 16px !important;
+  font-weight: var(--font-extrabold) !important;
+  letter-spacing: 0.02em !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+  margin: 0 !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+/* ── Description étape ── */
+
+.kp-asso-methode-step-desc p {
+  font-family: var(--font-body) !important;
+  font-size: 13px !important;
+  font-weight: var(--font-normal) !important;
+  line-height: var(--leading-relaxed) !important;
+  color: rgba(255, 255, 255, 0.50) !important;
+  margin: 0 !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 1024px) {
+  .kp-asso-methode-timeline::before {
+    display: none !important;
+  }
+  .kp-asso-methode-timeline {
+    flex-wrap: wrap !important;
+    gap: var(--space-lg) !important;
+  }
+  .kp-asso-methode-step {
+    flex: 0 0 calc(33.333% - var(--space-lg)) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .kp-asso-methode-step {
+    flex: 0 0 100% !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    gap: var(--space-md) !important;
+  }
+  .kp-asso-methode-step-num .elementor-heading-title {
+    flex-shrink: 0 !important;
+  }
+}
+
+
+/* ================================================
+   KP-ASSO-CTA
+   ================================================ */
+
+.kp-asso-cta,
+.kp-asso-cta.e-con {
+  background: #0F1F35 !important;
+  background-color: #0F1F35 !important;
+  position: relative !important;
+  padding: var(--space-4xl) 0 !important;
+  overflow: hidden !important;
+}
+
+.kp-asso-cta::after {
+  content: "" !important;
+  position: absolute !important;
+  top: -20% !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 700px !important;
+  height: 400px !important;
+  background: radial-gradient(ellipse, rgba(var(--c-green-glow), 0.12) 0%, transparent 70%) !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+
+.kp-asso-cta > .e-con-inner {
+  position: relative !important;
+  z-index: 1 !important;
+  align-items: center !important;
+  gap: 0 !important;
+}
+
+/* ── Titre ── */
+
+.kp-asso-cta .elementor-widget-heading .elementor-heading-title {
+  font-family: var(--font-display) !important;
+  font-size: var(--text-section) !important;
+  font-weight: var(--font-extrabold) !important;
+  line-height: var(--leading-snug) !important;
+  letter-spacing: -0.02em !important;
+  text-transform: uppercase !important;
+  text-align: center !important;
+  margin: 0 0 var(--space-md) !important;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.97) 40%,
+    rgba(200, 215, 230, 0.75) 100%
+  ) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* ── Sous-titre ── */
+
+.kp-asso-cta .elementor-widget-text-editor p {
+  font-family: var(--font-body) !important;
+  font-size: var(--text-subtitle) !important;
+  font-weight: var(--font-normal) !important;
+  line-height: var(--leading-relaxed) !important;
+  color: rgba(255, 255, 255, 0.55) !important;
+  text-align: center !important;
+  margin: 0 0 var(--space-2xl) !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+/* ── Bouton ── */
+
+.kp-asso-cta .elementor-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  background: var(--accent-green) !important;
+  border: 1px solid var(--accent-green) !important;
+  border-radius: var(--radius-button) !important;
+  padding: 16px 36px !important;
+  font-family: var(--font-display) !important;
+  font-size: 15px !important;
+  font-weight: var(--font-semibold) !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+  color: #0F1F35 !important;
+  -webkit-text-fill-color: #0F1F35 !important;
+  text-decoration: none !important;
+  box-shadow: 0 10px 30px rgba(var(--c-green-glow), 0.30) !important;
+  transition: transform var(--t-base) var(--ease-out),
+              box-shadow var(--t-base) var(--ease-out) !important;
+}
+
+.kp-asso-cta .elementor-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 18px 50px rgba(var(--c-green-glow), 0.45) !important;
+}
+
+.kp-asso-cta .elementor-button:active {
+  transform: translateY(1px) scale(0.98) !important;
+  transition-duration: 100ms !important;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 767px) {
+  .kp-asso-cta .elementor-heading-title {
+    font-size: 32px !important;
+  }
+  .kp-asso-cta .elementor-button {
+    padding: 14px 28px !important;
+    font-size: 14px !important;
+  }
+}
