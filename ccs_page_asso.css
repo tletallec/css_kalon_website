@@ -1,6 +1,9 @@
+
 /* ================================================
    KP-ASSO-HERO
    ================================================ */
+
+/* ── Section wrapper ── */
 
 .kp-asso-hero {
   background: var(--bg-dark) !important;
@@ -9,6 +12,8 @@
   padding-bottom: 80px !important;
   overflow: hidden !important;
 }
+
+/* Ligne dégradée en haut */
 
 .kp-asso-hero::before {
   content: "" !important;
@@ -29,6 +34,8 @@
   pointer-events: none !important;
   z-index: 1 !important;
 }
+
+/* Halo lumineux décoratif */
 
 .kp-asso-hero::after {
   content: "" !important;
@@ -71,7 +78,7 @@
   color: var(--accent-green) !important;
 }
 
-/* ── Tag ── */
+/* ── Tag "Parcours associations" ── */
 
 .kp-asso-hero-tag .elementor-heading-title {
   display: inline-flex !important;
@@ -142,7 +149,6 @@
   background: var(--accent-green) !important;
   border: 1px solid var(--accent-green) !important;
   color: var(--bg-dark) !important;
-  -webkit-text-fill-color: var(--bg-dark) !important;
   border-radius: var(--radius-button) !important;
   padding: 16px 32px !important;
   font-family: var(--font-display) !important;
@@ -155,6 +161,7 @@
   margin-top: var(--space-md) !important;
   transition: transform var(--t-base) var(--ease-out),
               box-shadow var(--t-base) var(--ease-out) !important;
+  -webkit-text-fill-color: var(--bg-dark) !important;
 }
 
 .kp-asso-hero-cta .elementor-button:hover {
@@ -167,7 +174,7 @@
   transition-duration: 100ms !important;
 }
 
-/* ── Responsive ── */
+/* ── Responsive tablette (≤ 1024px) ── */
 
 @media (max-width: 1024px) {
   .kp-asso-hero-title .elementor-heading-title {
@@ -175,19 +182,22 @@
   }
 }
 
+/* ── Responsive mobile (≤ 767px) ── */
+
 @media (max-width: 767px) {
   .kp-asso-hero {
     padding-top: 100px !important;
     padding-bottom: 48px !important;
   }
+
   .kp-asso-hero-title .elementor-heading-title {
     font-size: 38px !important;
   }
+
   .kp-asso-hero-subtitle p {
     font-size: 16px !important;
   }
 }
-
 
 /* ================================================
    KP-ASSO-OFFERS
@@ -247,7 +257,7 @@
   -webkit-text-fill-color: unset !important;
 }
 
-/* ── Tabs layout (vertical : nav gauche, panel droite) ── */
+/* ── Tabs layout ── */
 
 .kp-asso-offers-tabs {
   width: 100% !important;
@@ -342,7 +352,37 @@
 
 .kp-asso-offer-panel {
   border-radius: var(--radius-card) !important;
-  padding: var(--space-2xl) !important;
+  padding: var(--space-2xl) var(--space-2xl) !important;
+  flex-direction: column !important;
+  gap: var(--space-sm) !important;
+  border-top: 0 !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.kp-asso-offer-panel--green {
+  background: linear-gradient(160deg, rgba(var(--c-green-glow), 0.10) 0%, rgba(var(--c-green-glow), 0.03) 100%) !important;
+  border: 2px solid rgba(var(--c-green-glow), 0.25) !important;
+  box-shadow: 0 8px 30px rgba(var(--c-green-glow), 0.08) !important;
+}
+
+.kp-asso-offer-panel--teal {
+  background: linear-gradient(160deg, rgba(var(--c-teal), 0.10) 0%, rgba(var(--c-teal), 0.03) 100%) !important;
+  border: 2px solid rgba(var(--c-teal), 0.25) !important;
+  box-shadow: 0 8px 30px rgba(var(--c-teal), 0.08) !important;
+}
+
+.kp-asso-offer-panel--blue {
+  background: linear-gradient(160deg, rgba(var(--c-blue), 0.10) 0%, rgba(var(--c-blue), 0.03) 100%) !important;
+  border: 2px solid rgba(var(--c-blue), 0.25) !important;
+  box-shadow: 0 8px 30px rgba(var(--c-blue), 0.08) !important;
+}
+
+/* ── Panels ── */
+
+.kp-asso-offer-panel {
+  border-radius: var(--radius-card) !important;
+  padding: var(--space-2xl) var(--space-2xl) !important;
   flex-direction: column !important;
   gap: var(--space-md) !important;
   border-top: 0 !important;
@@ -367,7 +407,7 @@
   box-shadow: 0 8px 30px rgba(var(--c-blue), 0.08) !important;
 }
 
-/* Numéro décoratif bas-droite */
+/* ── Numéro décoratif bas-droite ── */
 
 .kp-asso-offer-panel--green::after { content: "01" !important; }
 .kp-asso-offer-panel--teal::after  { content: "02" !important; }
@@ -387,6 +427,9 @@
   opacity: 0.07 !important;
   color: var(--text-on-light) !important;
 }
+
+
+/* ── z-index sur tous les enfants pour passer au-dessus du watermark ── */
 
 .kp-asso-offer-panel > * {
   position: relative !important;
@@ -436,7 +479,7 @@
   -webkit-text-fill-color: unset !important;
 }
 
-/* ── Format badge (coloré par panel) ── */
+/* ── Format badge ── */
 
 .kp-asso-offer-format .elementor-heading-title {
   display: inline-flex !important;
@@ -447,23 +490,10 @@
   font-weight: var(--font-semibold) !important;
   letter-spacing: 1px !important;
   text-transform: uppercase !important;
+  background: rgba(var(--c-navy), 0.08) !important;
+  color: var(--text-on-light) !important;
   margin: var(--space-xs) 0 !important;
   -webkit-text-fill-color: unset !important;
-}
-.kp-asso-offer-panel--green .kp-asso-offer-format .elementor-heading-title {
-  background: rgba(var(--c-green-glow), 0.15) !important;
-  color: var(--accent-green-dark) !important;
-  border: 1px solid rgba(var(--c-green-glow), 0.30) !important;
-}
-.kp-asso-offer-panel--teal .kp-asso-offer-format .elementor-heading-title {
-  background: rgba(var(--c-teal), 0.15) !important;
-  color: var(--accent-teal-dark) !important;
-  border: 1px solid rgba(var(--c-teal), 0.30) !important;
-}
-.kp-asso-offer-panel--blue .kp-asso-offer-format .elementor-heading-title {
-  background: rgba(var(--c-blue), 0.15) !important;
-  color: var(--accent-blue-dark) !important;
-  border: 1px solid rgba(var(--c-blue), 0.30) !important;
 }
 
 /* ── Description ── */
@@ -479,25 +509,16 @@
   -webkit-text-fill-color: unset !important;
 }
 
-/* ── Body (2 colonnes Prestations / Bénéfices) ── */
+/* ── Séparateur avant le body ── */
 
 .kp-asso-offer-body {
   display: grid !important;
   grid-template-columns: 3fr 2fr !important;
   gap: var(--space-2xl) !important;
   width: 100% !important;
-  max-width: 100% !important;
-  align-items: stretch !important;
-  box-sizing: border-box !important;
   padding-top: var(--space-md) !important;
   border-top: 1px solid rgba(var(--c-navy), 0.10) !important;
   margin-top: var(--space-xs) !important;
-}
-
-.kp-asso-offer-col--presta,
-.kp-asso-offer-col--bens {
-  width: 100% !important;
-  min-width: 0 !important;
 }
 
 /* ── Label colonne ── */
@@ -553,28 +574,6 @@
   display: block !important;
 }
 
-/* ── Colonne Bénéfices (glassmorphisme teinté) ── */
-
-.kp-asso-offer-col--bens {
-  backdrop-filter: blur(16px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
-  border-radius: 16px !important;
-  padding: var(--space-lg) !important;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 4px 20px rgba(var(--c-navy), 0.08) !important;
-}
-.kp-asso-offer-panel--green .kp-asso-offer-col--bens {
-  background: rgba(var(--c-green-glow), 0.12) !important;
-  border: 1px solid rgba(var(--c-green-glow), 0.35) !important;
-}
-.kp-asso-offer-panel--teal .kp-asso-offer-col--bens {
-  background: rgba(var(--c-teal), 0.12) !important;
-  border: 1px solid rgba(var(--c-teal), 0.35) !important;
-}
-.kp-asso-offer-panel--blue .kp-asso-offer-col--bens {
-  background: rgba(var(--c-blue), 0.12) !important;
-  border: 1px solid rgba(var(--c-blue), 0.35) !important;
-}
-
 /* ── Liste Bénéfices ── */
 
 .kp-asso-offer-bens-list {
@@ -605,8 +604,7 @@
 .kp-asso-offer-panel--green .kp-asso-offer-bens-list li::before { color: var(--accent-green-dark) !important; }
 .kp-asso-offer-panel--teal  .kp-asso-offer-bens-list li::before { color: var(--accent-teal-dark) !important; }
 .kp-asso-offer-panel--blue  .kp-asso-offer-bens-list li::before { color: var(--accent-blue-dark) !important; }
-
-/* ── CTA boutons colorés ── */
+/* ── CTA ── */
 
 .kp-asso-offer-cta .elementor-button {
   display: inline-flex !important;
@@ -619,10 +617,11 @@
   letter-spacing: 0.5px !important;
   text-transform: uppercase !important;
   text-decoration: none !important;
-  border: none !important;
   transition: transform var(--t-base) var(--ease-out),
               box-shadow var(--t-base) var(--ease-out) !important;
+  border: none !important;
 }
+
 .kp-asso-offer-cta--green .elementor-button {
   background: var(--accent-green-dark) !important;
   color: #ffffff !important;
@@ -633,6 +632,7 @@
   transform: translateY(-2px) !important;
   box-shadow: 0 12px 32px rgba(var(--c-green-glow), 0.40) !important;
 }
+
 .kp-asso-offer-cta--teal .elementor-button {
   background: var(--accent-teal-dark) !important;
   color: #ffffff !important;
@@ -643,6 +643,7 @@
   transform: translateY(-2px) !important;
   box-shadow: 0 12px 32px rgba(var(--c-teal), 0.40) !important;
 }
+
 .kp-asso-offer-cta--blue .elementor-button {
   background: var(--accent-blue-dark) !important;
   color: #ffffff !important;
@@ -654,31 +655,114 @@
   box-shadow: 0 12px 32px rgba(var(--c-blue), 0.40) !important;
 }
 
-/* ── Responsive ── */
+/* ── Tablette (≤ 1024px) ── */
 
 @media (max-width: 1024px) {
   .kp-asso-offers-tabs .e-n-tabs {
     flex-direction: column !important;
   }
+
   .kp-asso-offers-tabs .e-n-tabs-heading {
     flex-direction: row !important;
     width: 100% !important;
   }
+
   .kp-asso-offer-body {
     grid-template-columns: 1fr !important;
     gap: var(--space-lg) !important;
   }
 }
 
+/* ── Mobile (≤ 767px) ── */
+
 @media (max-width: 767px) {
   .kp-asso-offers-tabs .e-n-tabs-heading {
     flex-direction: column !important;
   }
+
   .kp-asso-offer-panel {
     padding: var(--space-lg) !important;
   }
 }
 
+/* ── Format badge ── */
+
+.kp-asso-offer-format .elementor-heading-title {
+  display: inline-flex !important;
+  padding: 5px 14px !important;
+  border-radius: var(--radius-pill) !important;
+  font-family: var(--font-body) !important;
+  font-size: 11px !important;
+  font-weight: var(--font-semibold) !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  margin: var(--space-xs) 0 !important;
+  -webkit-text-fill-color: unset !important;
+}
+
+.kp-asso-offer-panel--green .kp-asso-offer-format .elementor-heading-title {
+  background: rgba(var(--c-green-glow), 0.15) !important;
+  color: var(--accent-green-dark) !important;
+  border: 1px solid rgba(var(--c-green-glow), 0.30) !important;
+}
+
+.kp-asso-offer-panel--teal .kp-asso-offer-format .elementor-heading-title {
+  background: rgba(var(--c-teal), 0.15) !important;
+  color: var(--accent-teal-dark) !important;
+  border: 1px solid rgba(var(--c-teal), 0.30) !important;
+}
+
+.kp-asso-offer-panel--blue .kp-asso-offer-format .elementor-heading-title {
+  background: rgba(var(--c-blue), 0.15) !important;
+  color: var(--accent-blue-dark) !important;
+  border: 1px solid rgba(var(--c-blue), 0.30) !important;
+}
+
+/* ── Colonne Bénéfices — glassmorphisme ── */
+
+/* ── Colonne Bénéfices — glassmorphisme ── */
+
+.kp-asso-offer-col--bens {
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+  border-radius: 16px !important;
+  padding: var(--space-lg) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), 0 4px 20px rgba(var(--c-navy), 0.08) !important;
+}
+
+.kp-asso-offer-panel--green .kp-asso-offer-col--bens {
+  background: rgba(var(--c-green-glow), 0.12) !important;
+  border: 1px solid rgba(var(--c-green-glow), 0.35) !important;
+}
+
+.kp-asso-offer-panel--teal .kp-asso-offer-col--bens {
+  background: rgba(var(--c-teal), 0.12) !important;
+  border: 1px solid rgba(var(--c-teal), 0.35) !important;
+}
+
+.kp-asso-offer-panel--blue .kp-asso-offer-col--bens {
+  background: rgba(var(--c-blue), 0.12) !important;
+  border: 1px solid rgba(var(--c-blue), 0.35) !important;
+}
+
+.kp-asso-offer-body {
+  display: grid !important;
+  grid-template-columns: 3fr 2fr !important;
+  gap: var(--space-2xl) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-top: var(--space-md) !important;
+  border-top: 1px solid rgba(var(--c-navy), 0.10) !important;
+  margin-top: var(--space-xs) !important;
+  align-items: stretch !important;
+  box-sizing: border-box !important;
+}
+
+.kp-asso-offer-col--presta,
+.kp-asso-offer-col--bens {
+  width: 100% !important;
+  min-width: 0 !important;
+}
 
 /* ================================================
    KP-ASSO-FORMATIONS
@@ -697,48 +781,6 @@
   z-index: 1 !important;
   align-items: center !important;
   gap: 0 !important;
-}
-
-/* ── Header badge Qualiopi ── */
-
-.kp-asso-formation-header {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  gap: var(--space-xl) !important;
-  background: rgba(255, 255, 255, 0.07) !important;
-  border: 1px solid rgba(255, 255, 255, 0.14) !important;
-  border-radius: var(--radius-card) !important;
-  padding: var(--space-lg) var(--space-xl) !important;
-  width: fit-content !important;
-  margin-bottom: var(--space-2xl) !important;
-}
-
-.kp-asso-formation-header .elementor-widget-image {
-  flex-shrink: 0 !important;
-}
-
-.kp-asso-formation-header .elementor-widget-image img {
-  width: 180px !important;
-  height: auto !important;
-  object-fit: contain !important;
-  display: block !important;
-  filter: brightness(0) invert(1) !important;
-  opacity: 0.80 !important;
-}
-
-.kp-asso-formation-header .elementor-widget-text-editor {
-  border-left: 1px solid rgba(255, 255, 255, 0.15) !important;
-  padding-left: var(--space-xl) !important;
-}
-
-.kp-asso-formation-header .elementor-widget-text-editor p {
-  font-family: var(--font-body) !important;
-  font-size: 14px !important;
-  font-weight: var(--font-medium) !important;
-  color: rgba(255, 255, 255, 0.65) !important;
-  line-height: var(--leading-relaxed) !important;
-  margin: 0 !important;
 }
 
 /* ── Titre ── */
@@ -782,11 +824,10 @@
   -webkit-text-fill-color: unset !important;
 }
 
-/* ── Tabs layout (horizontal, 4 pills) ── */
+/* ── Tabs layout ── */
 
 .kp-asso-formations-tabs {
   width: 100% !important;
-  margin-top: var(--space-3xl) !important;
   margin-bottom: var(--space-2xl) !important;
 }
 
@@ -843,8 +884,7 @@
   line-height: 1 !important;
 }
 
-/* ── Tab actif (4 couleurs) ── */
-
+/* Gouvernance → vert */
 .kp-asso-formations-tabs .e-n-tab-title:nth-child(1)[aria-selected="true"] {
   background: rgba(var(--c-green-glow), 0.15) !important;
   border: 2px solid rgba(var(--c-green-glow), 0.60) !important;
@@ -853,6 +893,8 @@
 .kp-asso-formations-tabs .e-n-tab-title:nth-child(1)[aria-selected="true"] .e-n-tab-title-text {
   color: rgba(var(--c-green-glow), 1) !important;
 }
+
+/* Engagement → teal */
 .kp-asso-formations-tabs .e-n-tab-title:nth-child(2)[aria-selected="true"] {
   background: rgba(var(--c-teal), 0.15) !important;
   border: 2px solid rgba(var(--c-teal), 0.60) !important;
@@ -861,6 +903,8 @@
 .kp-asso-formations-tabs .e-n-tab-title:nth-child(2)[aria-selected="true"] .e-n-tab-title-text {
   color: rgba(var(--c-teal), 1) !important;
 }
+
+/* Performance → bleu */
 .kp-asso-formations-tabs .e-n-tab-title:nth-child(3)[aria-selected="true"] {
   background: rgba(var(--c-blue), 0.15) !important;
   border: 2px solid rgba(var(--c-blue), 0.60) !important;
@@ -869,6 +913,8 @@
 .kp-asso-formations-tabs .e-n-tab-title:nth-child(3)[aria-selected="true"] .e-n-tab-title-text {
   color: rgba(var(--c-blue), 1) !important;
 }
+
+/* Modèle éco → violet */
 .kp-asso-formations-tabs .e-n-tab-title:nth-child(4)[aria-selected="true"] {
   background: rgba(var(--c-violet), 0.15) !important;
   border: 2px solid rgba(var(--c-violet), 0.60) !important;
@@ -910,7 +956,7 @@
   -webkit-text-fill-color: unset !important;
 }
 
-/* ── Description pilier ── */
+/* ── Description ── */
 
 .kp-asso-formations-pillar-desc p,
 .kp-asso-formations-panel p.e-paragraph-base {
@@ -978,9 +1024,9 @@
   border-radius: var(--radius-button) !important;
   padding: 14px 32px !important;
   box-shadow: 0 4px 20px rgba(var(--c-teal), 0.35) !important;
-  text-decoration: none !important;
   transition: transform var(--t-base) var(--ease-out),
               box-shadow var(--t-base) var(--ease-out) !important;
+  text-decoration: none !important;
 }
 
 .kp-asso-formations-cta .elementor-button:hover {
@@ -988,29 +1034,35 @@
   box-shadow: 0 10px 30px rgba(var(--c-teal), 0.50) !important;
 }
 
-/* ── Responsive ── */
+/* ── Tablette (≤ 1024px) ── */
 
 @media (max-width: 1024px) {
   .kp-asso-formations-tabs .e-n-tab-title {
     padding: 10px 14px !important;
     max-width: unset !important;
   }
+
   .kp-asso-formations-pillar-list .elementor-icon-list-items {
     grid-template-columns: 1fr !important;
   }
+
   .kp-asso-formations-panel {
     padding: var(--space-xl) !important;
   }
 }
 
+/* ── Mobile (≤ 767px) ── */
+
 @media (max-width: 767px) {
   .kp-asso-formations-tabs .e-n-tabs-heading {
     flex-wrap: wrap !important;
   }
+
   .kp-asso-formations-tabs .e-n-tab-title {
     flex: 0 0 calc(50% - 6px) !important;
     max-width: unset !important;
   }
+
   .kp-asso-formation-header {
     flex-direction: column !important;
     text-align: center !important;
@@ -1018,6 +1070,50 @@
   }
 }
 
+/* ── Header badge ── */
+
+.kp-asso-formation-header {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: var(--space-xl) !important;
+  background: rgba(255, 255, 255, 0.07) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  border-radius: var(--radius-card) !important;
+  padding: var(--space-lg) var(--space-xl) !important;
+  width: fit-content !important;
+  margin-bottom: var(--space-2xl) !important;
+}
+
+.kp-asso-formation-header .elementor-widget-image {
+  flex-shrink: 0 !important;
+}
+
+
+.kp-asso-formations-tabs {
+  margin-top: var(--space-3xl) !important;
+}
+.kp-asso-formation-header .elementor-widget-image img {
+  width: 180px !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+
+}
+
+.kp-asso-formation-header .elementor-widget-text-editor {
+  border-left: 1px solid rgba(255, 255, 255, 0.15) !important;
+  padding-left: var(--space-xl) !important;
+}
+
+.kp-asso-formation-header .elementor-widget-text-editor p {
+  font-family: var(--font-body) !important;
+  font-size: 14px !important;
+  font-weight: var(--font-medium) !important;
+  color: rgba(255, 255, 255, 0.65) !important;
+  line-height: var(--leading-relaxed) !important;
+  margin: 0 !important;
+}
 
 /* ================================================
    KP-ASSO-ACCOMPAGNEMENTS
@@ -1079,7 +1175,7 @@
   -webkit-text-fill-color: unset !important;
 }
 
-/* ── Grille 3 colonnes ── */
+/* ── Grille ── */
 
 .kp-asso-accompagnements .e-grid {
   display: grid !important;
@@ -1097,16 +1193,18 @@
   padding: var(--space-xl) !important;
   flex-direction: column !important;
   gap: var(--space-sm) !important;
-  position: relative !important;
-  overflow: hidden !important;
   transition: transform var(--t-base) var(--ease-out),
               box-shadow var(--t-base) var(--ease-out) !important;
+  position: relative !important;
+  overflow: hidden !important;
 }
 
 .kp-asso-accomp-grid:hover {
   transform: translateY(-4px) !important;
   box-shadow: 0 12px 32px rgba(var(--c-navy), 0.10) !important;
 }
+
+/* Première carte mise en avant */
 
 .kp-asso-accomp-grid:first-child {
   background: linear-gradient(160deg, rgba(var(--c-green-glow), 0.10) 0%, rgba(var(--c-teal), 0.06) 100%) !important;
@@ -1199,7 +1297,7 @@
   color: var(--text-on-light) !important;
 }
 
-/* ── Responsive ── */
+/* ── Tablette (≤ 1024px) ── */
 
 @media (max-width: 1024px) {
   .kp-asso-accompagnements .e-grid {
@@ -1207,15 +1305,17 @@
   }
 }
 
+/* ── Mobile (≤ 767px) ── */
+
 @media (max-width: 767px) {
   .kp-asso-accompagnements .e-grid {
     grid-template-columns: 1fr !important;
   }
+
   .kp-asso-accomp-grid {
     padding: var(--space-lg) !important;
   }
 }
-
 
 /* ================================================
    KP-ASSO-METHODE
@@ -1272,37 +1372,12 @@
   line-height: var(--leading-relaxed) !important;
   color: rgba(255, 255, 255, 0.55) !important;
   text-align: center !important;
-  margin: 0 0 var(--space-3xl) !important;
+  margin: 0 0 var(--space-2xl) !important;
   background: none !important;
   -webkit-text-fill-color: unset !important;
 }
 
-/* ── Timeline ── */
 
-.kp-asso-methode-timeline {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: flex-start !important;
-  gap: 0 !important;
-  width: 100% !important;
-  position: relative !important;
-}
-
-.kp-asso-methode-timeline::before {
-  content: "" !important;
-  position: absolute !important;
-  top: 28px !important;
-  left: 10% !important;
-  right: 10% !important;
-  height: 2px !important;
-  background: linear-gradient(
-    90deg,
-    rgba(var(--c-teal), 0.5) 0%,
-    rgba(var(--c-blue), 0.5) 100%
-  ) !important;
-  pointer-events: none !important;
-  z-index: 0 !important;
-}
 
 /* ── Step ── */
 
@@ -1364,20 +1439,24 @@
   -webkit-text-fill-color: unset !important;
 }
 
-/* ── Responsive ── */
+/* ── Tablette (≤ 1024px) ── */
 
 @media (max-width: 1024px) {
   .kp-asso-methode-timeline::before {
     display: none !important;
   }
+
   .kp-asso-methode-timeline {
     flex-wrap: wrap !important;
     gap: var(--space-lg) !important;
   }
+
   .kp-asso-methode-step {
     flex: 0 0 calc(33.333% - var(--space-lg)) !important;
   }
 }
+
+/* ── Mobile (≤ 767px) ── */
 
 @media (max-width: 767px) {
   .kp-asso-methode-step {
@@ -1387,6 +1466,7 @@
     text-align: left !important;
     gap: var(--space-md) !important;
   }
+
   .kp-asso-methode-step-num .elementor-heading-title {
     flex-shrink: 0 !important;
   }
@@ -1404,26 +1484,6 @@
   position: relative !important;
   padding: var(--space-4xl) 0 !important;
   overflow: hidden !important;
-}
-
-.kp-asso-cta::after {
-  content: "" !important;
-  position: absolute !important;
-  top: -20% !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  width: 700px !important;
-  height: 400px !important;
-  background: radial-gradient(ellipse, rgba(var(--c-green-glow), 0.12) 0%, transparent 70%) !important;
-  pointer-events: none !important;
-  z-index: 0 !important;
-}
-
-.kp-asso-cta > .e-con-inner {
-  position: relative !important;
-  z-index: 1 !important;
-  align-items: center !important;
-  gap: 0 !important;
 }
 
 /* ── Titre ── */
@@ -1445,6 +1505,13 @@
   -webkit-background-clip: text !important;
   background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
+}
+
+.kp-asso-cta > .e-con-inner {
+  position: relative !important;
+  z-index: 1 !important;
+  align-items: center !important;
+  gap: 0 !important;
 }
 
 /* ── Sous-titre ── */
@@ -1493,12 +1560,13 @@
   transition-duration: 100ms !important;
 }
 
-/* ── Responsive ── */
+/* ── Mobile (≤ 767px) ── */
 
 @media (max-width: 767px) {
   .kp-asso-cta .elementor-heading-title {
     font-size: 32px !important;
   }
+
   .kp-asso-cta .elementor-button {
     padding: 14px 28px !important;
     font-size: 14px !important;
